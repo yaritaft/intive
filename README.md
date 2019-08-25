@@ -38,7 +38,7 @@ If you want to run the test manually without coverage:
 
 And you will see an image like these one:
 
-
+![](https://github.com/yaritaft/intive/blob/master/images/test_manually.PNG)
 
 ### Tests
 
@@ -56,7 +56,7 @@ In order to reproduce the tests follow these commands:
 
 Results
 
-![](https://i.imgur.com/5wbGhrz.png)
+![](https://github.com/yaritaft/intive/blob/master/images/coverage_report.PNG)
 
 
 
