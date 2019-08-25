@@ -1,9 +1,9 @@
-##Table of Contents
+## Table of Contents
 
 [TOC]
 
 
-###Overview
+### Overview
 
 This is a python exercise. This is the context:
 
@@ -26,7 +26,7 @@ Note: we don't expect any kind of application, just a set of classes with its au
 - Fee calculation by hour, day and week.
 - Fee calculation by Family package.
 
-###Setup
+### Setup
 
 Open a terminal with git installed:
 
@@ -40,7 +40,7 @@ And you will see an image like these one:
 
 
 
-###Tests
+### Tests
 
 **Results in coveralls**
 
@@ -62,27 +62,27 @@ Results
 
 
 
-###Decisions taken
+### Decisions taken
 
 
 
-###Technology
+### Technology
 
-#####Programming Language
+##### Programming Language
 
 Python version 3.7.0
 
-#####Dependencies 
+##### Dependencies 
 `coverage==4.5.4`
 
 They can also be found in requirements.txt.
 
-###Standards used
+### Standards used
 
 - Google Python Style Guide: http://google.github.io/styleguide/pyguide.html
 
 
-###Author
+### Author
 Yari Ivan Taft
 
 https://github.com/yaritaft/
