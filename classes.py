@@ -133,7 +133,7 @@ class FamilyRent:
                 raise(ValueError("The amount of rents is not between 3 and 5. You loaded {}".format(len(rents))))
         else:
             raise(TypeError("The type of variable provided to Family Rent is not a tuple."))
-    def apply_discounts_total(self,total):
+    def apply_discount_total(self,total):
         """Apply discounts by reducing the total amount given.
             quantity and type before creating the object.
             Args:
@@ -152,5 +152,5 @@ class FamilyRent:
         total=0
         for one_rent in self.rents:
             total+=one_rent.fee()
-        total=self.apply_discounts_total(total)
+        total=self.apply_discount_total(total)
         return total
