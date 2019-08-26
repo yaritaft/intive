@@ -112,27 +112,24 @@ class FamilyRent:
             else:
                 raise ValueError("At least one element of the group of rents is not a Rent subclass.")
         else:
-            raise TypeError("The group of rents is not a tuple.")
+            raise(TypeError("The type of variable provided to Family Rent is not a tuple."))
         
 
-    def __init__(self,rents):#ADD HERE TRY AND EXCEPT if we are not receiving a list
+    def __init__(self,rents):
         """Create a family rent. A family rent is a group between 3 and 5 rents. These rents have to be validated in
             quantity and type before creating the object.
             Args:
                 RENTS (tuple): Tuple with the group of rents.
             Raises:
                 ValueError: When the group of rents is not between 3 and 5 rents.
-                TypeError: When rents is not a tuple.
             Return:
                 None
         """
-        if self.validate_list_of_rents(rents):
-            if (len(rents)>=self.floor) and (len(rents)<=self.top):#Apply controls to class type, every element should be hour, day or week rent and amount of rents
+        if self.validate_list_of_rents(rents) and  (len(rents)>=self.floor) and (len(rents)<=self.top):
                 self.rents=rents
-            else:
-                raise(ValueError("The amount of rents is not between 3 and 5. You loaded {}".format(len(rents))))
         else:
-            raise(TypeError("The type of variable provided to Family Rent is not a tuple."))
+            raise(ValueError("The amount of rents is not between 3 and 5. You loaded {}".format(len(rents))))
+            
     def apply_discount_total(self,total):
         """Apply discounts by reducing the total amount given.
             quantity and type before creating the object.
