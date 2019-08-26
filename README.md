@@ -72,6 +72,8 @@ In order to reproduce the coverage test follow these commands:
 
 ### Decisions
 
+
+
 - All the rents have in common that they have an amount of usage, a cost and the same formula to calculate the fee. That is why those three things are inherited from a super class Rent.
 
 - As every rent is calculated in the same way* it is not necesary to redefine fee in subclasses. In the future a new kind of rent can be created with a different formula. In that case, a fee method must be defined in that specific subclass. Otherwise It will be calculated as the current rents, by inheritance. (*Multiplying cost by amount of usage.)
