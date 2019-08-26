@@ -3,10 +3,10 @@
 - [Overview](#Overview)
 - [Features](#Features)
 - [Installation](#Installation)
-- [Tests](#Tests)
+- [Test Coverage](#test-coverage)
 - [Decisions](#Decisions)
 - [Technology](#Technology)
-- [Programming Language](#Programming Language)
+- [Programming Language](#programming-language)
 - [Dependencies](#Dependencies)
 - [Author](#Author)
 - [Standards](#Standards)
@@ -51,7 +51,7 @@ And you will see an image like these one:
 
 ![](https://github.com/yaritaft/intive/blob/master/images/test_manually.PNG)
 
-### Tests
+### Test Coverage
 
 **Results in coveralls**
 
@@ -65,7 +65,7 @@ In order to reproduce the coverage test follow these commands:
 
 `coverage report`
 
-##### Results
+#### Results
 
 ![](https://github.com/yaritaft/intive/blob/master/images/coverage_report.PNG)
 
@@ -75,15 +75,17 @@ In order to reproduce the coverage test follow these commands:
 
 ### Decisions
 
+As every rent is calculated in the same way* it was not necesary to redefine fee in subclasses. In the future a new kind of rent can be created with a different formula. In that case, a fee method must be defined in that subclass, otherwise It will be calculated as the current rents, by inheritance.
 
+*Multiplying cost by amount of usage. #TODO ADD THE CLASS VARIABLES EXPLANATION AND EXPLAN THAT AMOUNT OF USAGE DEPENDS ON THE SUBCLASS
 
 ### Technology
 
-##### Programming Language
+#### Programming Language
 
 Python version 3.7.0
 
-##### Dependencies 
+#### Dependencies 
 `coverage==4.5.4`
 
 They can also be found in requirements.txt.
