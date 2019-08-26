@@ -25,15 +25,24 @@ class FamilyRent:
     discount=0.3
     floor=3
     top=5
-
-    def validate_type_of_rents(self,list_of_rents):
-        return all(self.valid_rent(one_rent) for one_rent in list_of_rents)
-    def valid_rent(self,one_rent):
-        return ((isinstance(one_rent,WeekRent)) or (isinstance(one_rent,DayRent)) or (isinstance(one_rent,HourRent)))
+    
+    @staticmethod
+    def valid_rent(one_rent):
+        return type(one_rent) in Rent.__subclasses__()
+    @staticmethod
+    def validate_list_of_rents(list_of_rents):
+        if isinstance(list_of_rents,tuple):
+            if all(FamilyRent.valid_rent(one_rent) for one_rent in list_of_rents):
+                return all(FamilyRent.valid_rent(one_rent) for one_rent in list_of_rents)
+            else:
+                raise ValueError("At least one element of the list of rents is not a Rent subclass.")
+        else:
+            raise TypeError("The list of rents is not a tuple.")
+        
 
     def __init__(self,rents):#ADD HERE TRY AND EXCEPT if we are not receiving a list
         try:
-            if self.validate_type_of_rents(rents):
+            if self.validate_list_of_rents(rents):
                 if (len(rents)>=self.floor) and (len(rents)<=self.top):#Apply controls to class type, every element should be hour, day or week rent and amount of rents
                     self.rents=rents
                 else:
@@ -49,6 +58,3 @@ class FamilyRent:
             total+=one_rent.fee()
         total=self.apply_discounts_total(total)
         return total
-
-#Mencionar que al principio iba a usar polimorfmismo y terminé no usandolo porque no era necesario ya que el metodo era el mismo sisempre con distinta variable de clase.
-#a=WeekRent("a")

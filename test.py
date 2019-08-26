@@ -38,6 +38,8 @@ class TestFamilyRents(unittest.TestCase):
         self.assertRaises(ValueError,FamilyRent,(self.a_day_rent,self.a_day_rent,self.a_day_rent,self.a_day_rent,self.a_day_rent,self.a_day_rent))
     def test_family_rent_no_list_of_rents(self):
         self.assertRaises(TypeError,FamilyRent,5)
+    def test_family_rent_list_of_invalid_rents(self):
+        self.assertRaises(ValueError,FamilyRent,(5,7))
 
 
 

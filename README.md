@@ -70,14 +70,17 @@ In order to reproduce the coverage test follow these commands:
 ![](https://github.com/yaritaft/intive/blob/master/images/coverage_report.PNG)
 
 
-
-
-
 ### Decisions
 
-As every rent is calculated in the same way* it was not necesary to redefine fee in subclasses. In the future a new kind of rent can be created with a different formula. In that case, a fee method must be defined in that subclass, otherwise It will be calculated as the current rents, by inheritance.
+- All the rents have in common that they have an amount of usage, a cost and the same formula to calculate the fee. That is why those three things are inherited from a super class Rent.
 
-*Multiplying cost by amount of usage. #TODO ADD THE CLASS VARIABLES EXPLANATION AND EXPLAN THAT AMOUNT OF USAGE DEPENDS ON THE SUBCLASS
+- As every rent is calculated in the same way* it is not necesary to redefine fee in subclasses. In the future a new kind of rent can be created with a different formula. In that case, a fee method must be defined in that specific subclass. Otherwise It will be calculated as the current rents, by inheritance. (*Multiplying cost by amount of usage. #TODO ADD THE CLASS VARIABLES EXPLANATION AND EXPLAN THAT AMOUNT OF USAGE DEPENDS ON THE SUBCLASS)
+
+- The list of family rent is checked before creating it.
+
+- Family rent has three default class variables, a floor a top and a discount. If this values need to be changed, the user can modify class variables in run time. Also, it is possible to change those variables only for some specific objects if it is needed.
+
+- Cost is set a class variable for the same reason as above. That value can be redefined in run time without modiying the code itself.
 
 ### Technology
 
