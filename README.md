@@ -2,6 +2,7 @@
 
 - [Overview](#Overview)
 - [Features](#Features)
+- [PreRequisites](#PreRequisites)
 - [Installation](#Installation)
 - [Test Coverage](#test-coverage)
 - [Decisions](#Decisions)
@@ -36,6 +37,10 @@ Note: we don't expect any kind of application, just a set of classes with its au
 
 - Fee calculation by hour, day and week.
 - Fee calculation by Family package.
+
+### PreRequisites
+
+Python 3.7.0 installed.
 
 ### Installation
 
