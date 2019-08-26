@@ -72,7 +72,7 @@ In order to reproduce the coverage test follow these commands:
 
 ### Decisions
 
-
+![](https://github.com/yaritaft/intive/blob/master/images/class_diagram.jpg)
 
 - All the rents have in common that they have an amount of usage, a cost and the same formula to calculate the fee. That is why those three things are inherited from a super class Rent.
 
