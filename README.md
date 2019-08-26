@@ -48,11 +48,11 @@ Open a terminal with git installed:
 
 `git clone git@github.com:yaritaft/intive.git `
 
-If you want to run the test manually without coverage:
+To run the unit tests manually without coverage:
 
 `python test.py`
 
-And you will see an image like these one:
+The result will look like this:
 
 ![](https://github.com/yaritaft/intive/blob/master/images/test_manually.PNG)
 
@@ -62,7 +62,7 @@ And you will see an image like these one:
 
 [![Coverage Status](https://coveralls.io/repos/github/yaritaft/intive/badge.svg)](https://coveralls.io/github/yaritaft/intive)
 
-In order to reproduce the coverage test follow these commands:
+In order to reproduce test coverage follow these commands:
 
 `pip install --trusted-host pypi.python.org -r requirements.txt`
 
@@ -98,7 +98,7 @@ Python version 3.7.0
 #### Dependencies 
 `coverage==4.5.4`
 
-They can also be found in requirements.txt.
+Dependencies can also be found in requirements.txt.
 
 ### Standards
 
