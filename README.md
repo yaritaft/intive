@@ -58,6 +58,10 @@ The result will look like this:
 
 ### Test Coverage
 
+**Build  in Travis**
+
+[![Build Status](https://travis-ci.org/yaritaft/intive.svg?branch=master)](https://travis-ci.org/yaritaft/intive)
+
 **Results in coveralls**
 
 [![Coverage Status](https://coveralls.io/repos/github/yaritaft/intive/badge.svg)](https://coveralls.io/github/yaritaft/intive)
